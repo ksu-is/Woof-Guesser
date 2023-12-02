@@ -4,3 +4,4 @@ cocker
 collie
 poodle
 setter
+golden

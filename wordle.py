@@ -5,7 +5,7 @@ from letter_state import LetterState
 class Wordle:
 
     MAX_ATTEMPTS = 6
-    WORD_LENGTH = 5
+    WORD_LENGTH = 6
     VOIDED_LETTER = "*"
 
     def __init__(self, secret: str):

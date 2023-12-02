@@ -1,0 +1,40 @@
+import random
+
+# Main File
+dog_breeds_file = open("dog_breed_list.txt", "r")
+dog_breeds = dog_breeds_file.readlines()
+
+# Answer Constructor
+answer = dog_breeds[random.randint(0,len(dog_breeds)-1)].strip().lower()
+tries = 5
+letters_guessed = ""
+
+print("The word is: ", end = "")
+for letter in answer:  
+    print('*', end = "")
+print()
+print(tries, "tries remaining!")
+guess = ""
+while tries > 0:
+    print("Enter a guess: ", end = "")
+    guess = input().lower()
+    print()
+    letters_guessed = letters_guessed + guess
+    if guess == answer:  
+        break
+    else:
+        print("The word is: ", end = "")
+        for i in range(len(answer)):
+            if letters_guessed.find(answer[i]) != -1:
+                print(answer[i], end = "") 
+            else: 
+                print('*', end = "")
+        tries = tries - 1
+        print()
+        print(tries, "tries remaining!")
+
+if guess == answer:  
+    print("Congrats!", end=" ")
+else:
+    print("\nOh no!", end=" ")
+print("The word was \'" + answer + "\'")
