@@ -27,4 +27,4 @@ class Woof:
                 self.tries = self.tries - 1
                 self.letters_guessed = self.letters_guessed + guess
                 if self.tries < 5: print()
-        print(f"Oh no! The word was {self.answer}")
+        if self.tries == 0 and guess != self.answer: print(f"Oh no! The word was {self.answer}")
