@@ -1,7 +1,0 @@
-beagle
-borzoi
-cocker
-collie
-poodle
-setter
-golden
